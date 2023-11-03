@@ -27,22 +27,26 @@
 8. **Add Tags (Optional):**
    Tags are key-value pairs that you can use to categorize and identify your instances. This step is optional but can be helpful for organization.
 
-9. **Configure Security Group:**
+9. **Configure Security Group:** [ Allow access from known IP addresses only.]
    A security group acts as a firewall for your instance. Configure inbound and outbound rules to control network traffic. Be sure to allow SSH (port 22) or other protocols you need.
+NOTE: In the Security Group enable access to following ports from anywhere Here only for learning purpose| Rules with source of 0.0.0.0/0 or ::/0 allow all IP addresses to access your instance.
 
-10. **Review and Launch:**
+![image](https://github.com/asiandevs/cloud_services/assets/37457408/f0007633-7f0c-4908-b1c2-654157a8420e)
+
+
+11. **Review and Launch:**
     Review your configuration settings, and then click "Launch" when you're ready to proceed.
 
-11. **Create or Choose a Key Pair:**
+12. **Create or Choose a Key Pair:**
     If you don't have an existing key pair, you'll need to create one. This is crucial for SSH access to your instance. Download and securely store the private key (.pem) file.
 
-12. **Launch Instances:**
+13. **Launch Instances:**
     After creating or selecting a key pair, click "Launch Instances."
 
-13. **View Instances:**
+14. **View Instances:**
     You'll be directed to the Instances view, where you can see the status of your new instance. It may take a few minutes for it to become available.
 
-14. **Connect to Your Instance:**
+15. **Connect to Your Instance:**
     Once the instance is running, you can connect to it using SSH (for Linux) or RDP (for Windows). Use the key pair you created or selected in step 11.
 
 That's a basic overview of launching an EC2 instance. Remember to secure your instance, manage your security group rules, and regularly back up your data. Also, be mindful of costs, as AWS charges based on usage, so stop or terminate instances when you're not using them to avoid unnecessary expenses.
