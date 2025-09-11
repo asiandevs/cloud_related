@@ -18,28 +18,26 @@ This template provides a systematic approach to cloud migration planning, derive
 - **Stakeholder Alignment**: Clear communication plans and sign-off processes
 - **Measurable Success**: Specific KPIs and acceptance criteria
 
-## 🚀 Quick Start
+## How to Use This Template
 
-1. **Download** the template file: [`application-migration-template.md`](./application-migration-template.md)
-2. **Copy** the template for your specific application
-3. **Fill in** the bracketed placeholders with your application details
-4. **Customize** sections based on your organization's requirements
-5. **Review** with stakeholders and obtain approvals
+1. **Fork or clone the repository** to your workspace.  
+2. **Rename the template file** to reflect your project, e.g., `CustomerPortal_MigrationPlan.md`.  
+3. **Replace sample values** with your project-specific details:  
+   - Application name, IDs, and project contacts  
+   - Current infrastructure, servers, and database configurations  
+   - Target cloud architecture (AWS/Azure/Other)  
+   - Timeline, milestones, and resource allocation  
+4. **Update tables, charts, and checklists** as per your project requirements.  
+5. **Share with stakeholders** for review and approval. Use version control to track changes.  
+6. **Maintain the document** throughout migration and post-migration phases.  
+7. **Archive final version** for future reference and lessons learned.
 
 ## 📁 Repository Structure
 
 ```
 ├── README.md                           # This file
 ├── application-migration-template.md   # Main template file
-├── examples/                          # Sample completed templates
-│   ├── web-application-example.md
-│   └── database-migration-example.md
-├── assets/                           # Supporting materials
-│   ├── risk-matrix-template.xlsx
-│   └── communication-plan-template.xlsx
-└── docs/                            # Additional documentation
-    ├── migration-patterns.md
-    └── best-practices.md
+
 ```
 
 ## 🎯 Template Sections
@@ -230,17 +228,8 @@ We welcome contributions to improve this template:
 - [AWS Migration Best Practices](https://aws.amazon.com/cloud-migration/best-practices/)
 - [Cloud Adoption Framework](https://aws.amazon.com/professional-services/CAF/)
 
-## 🐛 Issues and Support
-
-### Common Issues
-- **Template Customization**: See the [Customization Guide](#-customization-guide)
-- **Missing Sections**: Check the [examples folder](./examples/) for reference
-- **Stakeholder Resistance**: Review communication strategies in [docs/best-practices.md](./docs/best-practices.md)
-
-### Getting Help
+## 🐛 Issues and Support, Discussion
 - 📧 **Email**: [monowar.mukul@gmail.com]
-- 💬 **Discussion**: [GitHub Discussions](../../discussions)
-- 🐛 **Issues**: [GitHub Issues](../../issues)
 
 ## 📜 License
 
