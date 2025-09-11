@@ -20,7 +20,7 @@ This template provides a systematic approach to cloud migration planning, derive
 
 ## How to Use This Template
 
-1. **Fork or clone the repository** to your workspace.  
+1. **Fork or clone the repository** to your workspace. or **Download** the template file: [`application-migration-template.md`](https://github.com/asiandevs/cloud_services/blob/main/application-migration-template.md)
 2. **Rename the template file** to reflect your project, e.g., `CustomerPortal_MigrationPlan.md`.  
 3. **Replace sample values** with your project-specific details:  
    - Application name, IDs, and project contacts  
@@ -37,7 +37,9 @@ This template provides a systematic approach to cloud migration planning, derive
 ```
 ├── README.md                           # This file
 ├── application-migration-template.md   # Main template file
-
+├── awscli_setup.md                     # Install and Configure AWS CLI on CentOS
+├── create_ec2.md                       # Step-by-Step Guide: Launching an AWS EC2 Instance
+├── connect_EC2.md                      # connecting to an EC2 Linux instance
 ```
 
 ## 🎯 Template Sections
@@ -228,7 +230,7 @@ We welcome contributions to improve this template:
 - [AWS Migration Best Practices](https://aws.amazon.com/cloud-migration/best-practices/)
 - [Cloud Adoption Framework](https://aws.amazon.com/professional-services/CAF/)
 
-## 🐛 Issues and Support, Discussion
+## 🐛 Issues, Support & Discussion
 - 📧 **Email**: [monowar.mukul@gmail.com]
 
 ## 📜 License
