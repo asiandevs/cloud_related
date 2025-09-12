@@ -1,4 +1,3 @@
-````markdown
 # Application Migration Project Plan Template
 
 ---
@@ -202,34 +201,31 @@ gantt
     Smoke Testing       :        des7, 2025-09-14, 1d
     Performance Validation :     des8, 2025-09-15, 1d
     User Acceptance     :        des9, 2025-09-16, 3d
-````
-
----
-
+```
 # 5. Testing Strategy
 
 ## 5.1 Test Plan Overview
 
-* **Testing Approach:** Hybrid (automated + manual)
-* **Test Environment:** Staging environment in AWS
-* **Testing Tools:** JMeter, Selenium, AWS Inspector
+- **Testing Approach:** Hybrid (automated + manual)
+- **Test Environment:** Staging environment in AWS
+- **Testing Tools:** JMeter, Selenium, AWS Inspector
 
 ## 5.2 Test Scenarios
 
-| Test Type   | Description               | Acceptance Criteria          | Owner         |
-| ----------- | ------------------------- | ---------------------------- | ------------- |
-| Functional  | Customer login, billing   | 100% pass rate               | QA Lead       |
-| Performance | 1K concurrent users       | ≤ 300ms response time        | Perf Engineer |
-| Security    | IAM roles, SG rules       | No high-risk vulnerabilities | Security Lead |
-| Integration | CRM API, Payment Gateway  | All integrations successful  | App Team      |
-| DR          | Backup/restore validation | RTO ≤ 2h, RPO ≤ 15m          | DBA           |
+| Test Type | Description | Acceptance Criteria | Owner |
+|-----------|-------------|---------------------|-------|
+| Functional | Customer login, billing | 100% pass rate | QA Lead |
+| Performance | 1K concurrent users | ≤ 300ms response time | Perf Engineer |
+| Security | IAM roles, SG rules | No high-risk vulnerabilities | Security Lead |
+| Integration | CRM API, Payment Gateway | All integrations successful | App Team |
+| DR | Backup/restore validation | RTO ≤ 2h, RPO ≤ 15m | DBA |
 
 ## 5.3 Rollback Criteria
 
-* [ ] Critical functionality failure
-* [ ] Response times exceed 500ms
-* [ ] Security vulnerabilities found
-* [ ] Data corruption detected
+- [ ] Critical functionality failure
+- [ ] Response times exceed 500ms
+- [ ] Security vulnerabilities found
+- [ ] Data corruption detected
 
 ---
 
@@ -237,19 +233,19 @@ gantt
 
 ## 6.1 Migration Risks
 
-| Risk                       | Impact | Probability | Mitigation Strategy             | Owner     |
-| -------------------------- | ------ | ----------- | ------------------------------- | --------- |
-| Data loss during migration | High   | Low         | Multi-level backups + PITR      | DBA       |
-| Extended downtime          | Medium | Medium      | Weekend cutover + rollback      | PM        |
-| Performance issues         | Medium | Medium      | Load testing pre/post-migration | Perf Eng. |
-| Integration failures       | High   | Low         | API mocks & staging validation  | App Lead  |
+| Risk | Impact | Probability | Mitigation Strategy | Owner |
+|------|--------|-------------|-------------------|-------|
+| Data loss during migration | High | Low | Multi-level backups + PITR | DBA |
+| Extended downtime | Medium | Medium | Weekend cutover + rollback | PM |
+| Performance issues | Medium | Medium | Load testing pre/post-migration | Perf Eng. |
+| Integration failures | High | Low | API mocks & staging validation | App Lead |
 
 ## 6.2 Business Continuity
 
-* **Maximum Tolerable Downtime:** 8 hours
-* **RTO:** 2 hours
-* **RPO:** 15 minutes
-* **Business Process Impact:** Billing delayed, customer access blocked
+- **Maximum Tolerable Downtime:** 8 hours
+- **RTO:** 2 hours
+- **RPO:** 15 minutes
+- **Business Process Impact:** Billing delayed, customer access blocked
 
 ---
 
@@ -257,19 +253,19 @@ gantt
 
 ## 7.1 Team Structure
 
-| Role                | Responsibility      | Resource      | Effort (Hours) |
-| ------------------- | ------------------- | ------------- | -------------- |
-| Migration Lead      | Overall execution   | Michael Chen  | 120            |
-| System Admin        | Server config       | Anna Williams | 80             |
-| DBA                 | DB migration        | Ravi Kumar    | 100            |
-| Network Engineer    | Networking setup    | Tom Nguyen    | 60             |
-| Security Specialist | Security validation | Priya Patel   | 70             |
-| Application Owner   | Business validation | David Roberts | 40             |
+| Role | Responsibility | Resource | Effort (Hours) |
+|------|----------------|----------|----------------|
+| Migration Lead | Overall execution | Michael Chen | 120 |
+| System Admin | Server config | Anna Williams | 80 |
+| DBA | DB migration | Ravi Kumar | 100 |
+| Network Engineer | Networking setup | Tom Nguyen | 60 |
+| Security Specialist | Security validation | Priya Patel | 70 |
+| Application Owner | Business validation | David Roberts | 40 |
 
 ## 7.2 Infrastructure Requirements
 
-* **Development/Testing:** AWS sandbox, test data sets
-* **Production:** AWS prod account, DNS changes, routing updates
+- **Development/Testing:** AWS sandbox, test data sets
+- **Production:** AWS prod account, DNS changes, routing updates
 
 ---
 
@@ -277,21 +273,21 @@ gantt
 
 ## 8.1 Stakeholder Matrix
 
-| Stakeholder Group | Interest Level | Communication Method | Frequency  |
-| ----------------- | -------------- | -------------------- | ---------- |
-| Application Users | High           | Email notifications  | Pre/During |
-| Business Owners   | High           | Status meetings      | Weekly     |
-| Technical Teams   | High           | Teams/Slack updates  | Daily      |
-| Management        | Medium         | Dashboard reports    | Weekly     |
+| Stakeholder Group | Interest Level | Communication Method | Frequency |
+|-------------------|----------------|---------------------|-----------|
+| Application Users | High | Email notifications | Pre/During |
+| Business Owners | High | Status meetings | Weekly |
+| Technical Teams | High | Teams/Slack updates | Daily |
+| Management | Medium | Dashboard reports | Weekly |
 
 ## 8.2 Communication Schedule
 
-| Milestone                   | Audience         | Message                      | Timeline  |
-| --------------------------- | ---------------- | ---------------------------- | --------- |
+| Milestone | Audience | Message | Timeline |
+|-----------|----------|---------|----------|
 | Migration Planning Complete | All stakeholders | Migration schedule confirmed | T-2 weeks |
-| Pre-migration Testing       | Tech teams       | Test results readiness       | T-1 week  |
-| Migration Start             | All users        | Maintenance window begins    | T-0       |
-| Migration Complete          | All stakeholders | System restored, validated   | T+4 hrs   |
+| Pre-migration Testing | Tech teams | Test results readiness | T-1 week |
+| Migration Start | All users | Maintenance window begins | T-0 |
+| Migration Complete | All stakeholders | System restored, validated | T+4 hrs |
 
 ---
 
@@ -300,32 +296,31 @@ gantt
 ## 9.1 Validation Checklist
 
 **Technical Validation:**
-
-* [x] Services running
-* [x] DB connectivity confirmed
-* [x] Functional validation passed
-* [x] Response time ≤ 300ms
-* [x] Security controls active
-* [x] Monitoring operational
-* [x] Backup tested
+- [x] Services running
+- [x] DB connectivity confirmed
+- [x] Functional validation passed
+- [x] Response time ≤ 300ms
+- [x] Security controls active
+- [x] Monitoring operational
+- [x] Backup tested
 
 **Business Validation:**
-
-* [x] UAT signed-off
-* [x] Billing workflows verified
-* [x] Customer portal accessible
+- [x] UAT signed-off
+- [x] Billing workflows verified
+- [x] Customer portal accessible
 
 ## 9.2 Optimization Activities
 
 **Immediate (Week 1):** Right-sizing, security config review, cost analysis
+
 **Short-term (Month 1):** Reserved instances, autoscaling, CloudWatch dashboards
 
 ## 9.3 Knowledge Transfer
 
-* Architecture diagrams updated
-* Ops runbook updated
-* Troubleshooting guide provided
-* Training delivered to ops team
+- Architecture diagrams updated
+- Ops runbook updated
+- Troubleshooting guide provided
+- Training delivered to ops team
 
 ---
 
@@ -333,26 +328,26 @@ gantt
 
 ## 10.1 Technical Metrics
 
-| Metric             | Baseline | Target | Actual | Status |
-| ------------------ | -------- | ------ | ------ | ------ |
-| Application Uptime | 99.5%    | 99.9%  | 100%   | ✅ Met  |
-| Response Time (ms) | 250      | 300    | 280    | ✅ Met  |
-| CPU Utilization    | 70%      | <65%   | 60%    | ✅ Met  |
-| Memory Utilization | 85%      | <75%   | 70%    | ✅ Met  |
+| Metric | Baseline | Target | Actual | Status |
+|--------|----------|--------|--------|--------|
+| Application Uptime | 99.5% | 99.9% | 100% | ✅ Met |
+| Response Time (ms) | 250 | 300 | 280 | ✅ Met |
+| CPU Utilization | 70% | <65% | 60% | ✅ Met |
+| Memory Utilization | 85% | <75% | 70% | ✅ Met |
 
 ## 10.2 Business Metrics
 
-| Metric                | Baseline | Target | Actual | Status  |
-| --------------------- | -------- | ------ | ------ | ------- |
-| User Satisfaction     | 78%      | 90%    | 88%    | ⚠️ Near |
-| Business Process Time | 4 hrs    | 2 hrs  | 2 hrs  | ✅ Met   |
-| Error Rate            | 5%       | <2%    | 1.5%   | ✅ Met   |
+| Metric | Baseline | Target | Actual | Status |
+|--------|----------|--------|--------|---------|
+| User Satisfaction | 78% | 90% | 88% | ⚠️ Near |
+| Business Process Time | 4 hrs | 2 hrs | 2 hrs | ✅ Met |
+| Error Rate | 5% | <2% | 1.5% | ✅ Met |
 
 ## 10.3 Cost Metrics
 
-* Migration Cost: \$150K (Actual: \$140K)
-* Monthly Operating Cost: \$50K (Actual: \$45K)
-* Cost Savings: \$20K/month (Actual: \$22K)
+- Migration Cost: $150K (Actual: $140K)
+- Monthly Operating Cost: $50K (Actual: $45K)
+- Cost Savings: $20K/month (Actual: $22K)
 
 ---
 
@@ -360,20 +355,20 @@ gantt
 
 ## 11.1 What Went Well
 
-* Smooth cutover within 6 hours
-* Automation reduced manual errors
-* Strong team collaboration
+- Smooth cutover within 6 hours
+- Automation reduced manual errors
+- Strong team collaboration
 
 ## 11.2 Areas for Improvement
 
-* CRM integration testing started too late
-* Communication gaps during DNS cutover
+- CRM integration testing started too late
+- Communication gaps during DNS cutover
 
 ## 11.3 Recommendations
 
-* Start integration tests earlier
-* Add automated DNS failover
-* Allocate extra buffer in timeline
+- Start integration tests earlier
+- Add automated DNS failover
+- Allocate extra buffer in timeline
 
 ---
 
@@ -381,34 +376,34 @@ gantt
 
 ## 12.1 Migration Acceptance
 
-| Role               | Name          | Signature | Date       | Comments       |
-| ------------------ | ------------- | --------- | ---------- | -------------- |
-| Application Owner  | David Roberts |           | 2025-09-17 |                |
-| Technical Lead     | Michael Chen  |           | 2025-09-17 |                |
-| Security Lead      | Priya Patel   |           | 2025-09-18 |                |
-| Operations Manager | James Wong    |           | 2025-09-18 |                |
-| Project Manager    | Sarah Johnson |           | 2025-09-18 | Final approval |
+| Role | Name | Signature | Date | Comments |
+|------|------|-----------|------|----------|
+| Application Owner | David Roberts | | 2025-09-17 | |
+| Technical Lead | Michael Chen | | 2025-09-17 | |
+| Security Lead | Priya Patel | | 2025-09-18 | |
+| Operations Manager | James Wong | | 2025-09-18 | |
+| Project Manager | Sarah Johnson | | 2025-09-18 | Final approval |
 
 ## 12.2 Project Closure Checklist
 
-* [x] Deliverables completed
-* [x] Knowledge transfer completed
-* [x] Documentation updated
-* [x] Lessons learned captured
-* [x] Post-implementation review scheduled
-* [x] Support transition completed
-* [x] Project resources released
+- [x] Deliverables completed
+- [x] Knowledge transfer completed
+- [x] Documentation updated
+- [x] Lessons learned captured
+- [x] Post-implementation review scheduled
+- [x] Support transition completed
+- [x] Project resources released
 
 **Project Closure Date:** 2025-09-18
+
 **Post-Implementation Review Date:** 2025-10-02
 
 ---
 
 # Appendices
 
-* **Appendix A:** Technical Specifications – AWS architecture diagrams
-* **Appendix B:** Test Results – JMeter reports, UAT sign-off
-* **Appendix C:** Security Validation – PCI-DSS scan results
-* **Appendix D:** Runbook – Migration cutover steps
-* **Appendix E:** Contact Information – Escalation list and emergency contacts
-
+- **Appendix A:** Technical Specifications – AWS architecture diagrams
+- **Appendix B:** Test Results – JMeter reports, UAT sign-off
+- **Appendix C:** Security Validation – PCI-DSS scan results
+- **Appendix D:** Runbook – Migration cutover steps
+- **Appendix E:** Contact Information – Escalation list and emergency contacts
