@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Cloud Migration](https://img.shields.io/badge/Cloud-AWS-orange.svg)](https://aws.amazon.com/)
+[![Cloud Migration](https://img.shields.io/badge/Cloud-AZURE-blue.svg)](https://azure.microsoft.com/)
 [![Template](https://img.shields.io/badge/Type-Template-blue.svg)]()
 
 > A comprehensive, battle-tested template for planning and executing individual application migrations to AWS Cloud.
