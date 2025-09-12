@@ -12,7 +12,7 @@ This template provides a systematic approach to cloud migration planning, derive
 
 ### Why Use This Template?
 
-- **Proven Framework**: Based on successful migration of over 100+ applications across 36 months
+- **Proven Framework**: Based on successful migration of many applications/Infrastructure across 5+ years
 - **Comprehensive Coverage**: From technical assessment to post-migration optimization
 - **Risk Management**: Built-in risk identification and mitigation strategies
 - **Stakeholder Alignment**: Clear communication plans and sign-off processes
