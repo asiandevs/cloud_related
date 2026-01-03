@@ -180,10 +180,10 @@ export ORACLE_HOME=/u01/app/oracle/product/12.2.0.1
 Create a dedicated directory for the Fast Recovery Area (FRA):
 
 ```bash
-mkdir -p /singleaz_reco/dtuporawu02/FRA/GISACSE
+mkdir -p /singleaz_reco/<NODE_NAME>/FRA/<DB_NAME>
 ```
 
-> 📝 **Note:** Replace `GISACSE` with your actual database name and adjust the path according to your environment's directory structure.
+> 📝 **Note:** Replace `<DB_NAME>` with your actual database name and adjust the path according to your environment's directory structure.
 
 ### Step 3: Execute Database Creation in Silent Mode
 
@@ -203,7 +203,7 @@ $ORACLE_HOME/bin/dbca -silent -createDatabase \
 -asmsnmpPassword <Password> \
 -diskGroupName +DATA \
 -datafileDestination +DATA \
--recoveryAreaDestination /singleaz_reco/dtuporawu02/FRA/GISACSE \
+-recoveryAreaDestination /singleaz_reco/<NODE_NAME>/FRA/<DB_NAME> \
 -characterSet WE8ISO8859P1 \
 -nationalCharacterSet AL16UTF16 \
 -databaseType MULTIPURPOSE \
@@ -226,7 +226,7 @@ $ORACLE_HOME/bin/dbca -silent -createDatabase \
 -asmsnmpPassword <Password> \
 -diskGroupName +DATA \
 -datafileDestination +DATA \
--recoveryAreaDestination /singleaz_reco/dtuporawu02/FRA/GISACSE \
+-recoveryAreaDestination /singleaz_reco/<NODE_NAME>/FRA/<DB_NAME> \
 -characterSet WE8ISO8859P1 \
 -nationalCharacterSet AL16UTF16 \
 -databaseType MULTIPURPOSE \
@@ -326,7 +326,7 @@ srvctl config database -d <DB NAME> | grep -i password
 
 ---
 
-## Special Configuration: ArcGIS SDE Schema Requirements
+## Special Configuration: GIS related database (sample - ArcGIS SDE Schema) Requirements
 
 If you're using ArcGIS with SDE (Spatial Database Engine), you'll need to configure external procedures. This is a one-time configuration per server (or per Oracle Home if you have multiple homes).
 
